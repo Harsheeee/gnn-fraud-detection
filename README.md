@@ -147,29 +147,3 @@ Expected performance on the test set:
 - **GAT**: F1-score ~0.72-0.77 (best performance)
 
 *Note: Exact scores depend on train/test split and random seed*
-
-## Technical Highlights
-
-### Graph Construction
-- Nodes: Individual Bitcoin transactions
-- Edges: Value transfers between transactions
-- Features: Aggregated transaction properties and temporal indicators
-
-### Training Pipeline
-1. Feature scaling using StandardScaler
-2. PyTorch Geometric Data object construction
-3. Train/validation/test split (50-30-20)
-4. Forward pass through GNN layers
-5. Backpropagation with gradient updates
-6. Evaluation on separate test set
-
-### Reproducibility
-- Fixed random seed (42) across all randomness sources
-- Deterministic initialization of model weights
-- Consistent data splitting strategy
-
-## References
-
-- [Elliptic Dataset Paper](https://arxiv.org/abs/1908.08038)
-- [PyTorch Geometric Documentation](https://pytorch-geometric.readthedocs.io/)
-- [Graph Neural Networks Primer](https://arxiv.org/abs/2012.08752)
