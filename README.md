@@ -250,11 +250,11 @@ Test set metrics (timesteps 35–49), fixed threshold = 0.5:
 | Model | F1 (Illicit) | Precision | Recall | PR-AUC |
 |---|---|---|---|---|
 | **GCN** | ~0.46 | ~0.37 | ~0.60 | ~0.48 |
-| **GraphSAGE** | **~0.58** | **~0.54** | **~0.64** | **~0.60** |
-| **GAT** | ~0.55 | ~0.60 | ~0.50 | ~0.55 |
+| **GraphSAGE** | ~0.58 | ~0.54 | ~0.64 | ~0.60 |
+| **GAT** | **~0.72** | **~0.76** | **~0.69** | **~0.78** |
 
-- **GraphSAGE** achieves the best overall F1 and recall, making it the best model for maximizing illicit transaction detection.
-- **GAT** achieves the highest precision but lower recall — fewer false positives at the cost of missing more illicit transactions.
+- **GAT** achieves the best overall F1 and PR-AUC, making it the best model for maximizing illicit transaction detection.
+- **GraphSAGE** achieves strong recall but lower precision compared to GAT.
 - **GCN** shows the highest raw recall but poor precision, reflecting aggressive classification of the minority class.
 - Rolling Window training (see below) significantly boosts recall beyond all static baselines by allowing the model to adapt to distribution shifts in real time.
 
